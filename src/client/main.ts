@@ -145,9 +145,7 @@ on("__cfx_nui:buy", data => {
                         },
                       );
                     } else {
-                      notifyText(lang["stored_vehicle"].replace("_vehicle_", lang["vehicle"]));
                       stopRent = false;
-                      haveVehicle = false;
                       clearInterval(payRent);
                     }
                   } else {
@@ -243,7 +241,7 @@ const configLoaded = (): void => {
       blips[i] = AddBlipForCoord(zones[i].x, zones[i].y, zones[i].z);
       SetBlipSprite(blips[i], blip.id);
       SetBlipDisplay(blips[i], 4);
-      SetBlipScale(blips[i], 1.0);
+      SetBlipScale(blips[i], blip.size);
       SetBlipColour(blips[i], blip.color);
       SetBlipAsShortRange(blips[i], true);
       BeginTextCommandSetBlipName("STRING");
@@ -334,6 +332,7 @@ const configLoaded = (): void => {
               DeleteVehicle(rentedVehicle);
               stopRent = true;
               haveVehicle = false;
+              notifyText(lang["stored_vehicle"].replace("_vehicle_", lang["vehicle"]));
             }
           } else if (!IsPedInAnyVehicle(PlayerPedId(), false)) {
             helpText(lang["press_e"].replace("_vehicle_", lang["vehicle"]));

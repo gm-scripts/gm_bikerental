@@ -1,12 +1,12 @@
 {
-  "framework": "vrp",
+  "framework": "esx",
   "lang": "en",
   "keys": {
     "openMenu": 38
   },
   "rentForFree": false,
   "payForTime": true,
-  "payInterval": 10,
+  "payInterval": 5,
   "blockIfCantPay": true,
   "payForDamage": true,
   "damageCost": 1,

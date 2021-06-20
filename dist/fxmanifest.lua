@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'Eichenholz & Obsidianical'
-description 'RentalName / GM-Scripts'
+description 'Bike rental / GM-Scripts'
 
 ui_page 'html/index.html'
 
